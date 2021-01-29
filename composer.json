@@ -10,6 +10,7 @@
     ],
     "require": {
         "php": ">=7.0.0",
+        "laravel/lumen-framework": "^8.0",
         "citizenzet/php-kernel": "*"
     },
     "autoload": {
