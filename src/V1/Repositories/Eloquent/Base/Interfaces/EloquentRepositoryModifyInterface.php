@@ -5,6 +5,5 @@ use Citizenzet\Php\Core\Interfaces\DataModifyInterface;
 
 interface EloquentRepositoryModifyInterface extends DataModifyInterface
 {
-    public function deleteById($id);
-    public function updateById($id, $data);
+
 }
