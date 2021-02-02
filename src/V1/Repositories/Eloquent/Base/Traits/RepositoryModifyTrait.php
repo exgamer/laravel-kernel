@@ -9,8 +9,11 @@ trait RepositoryModifyTrait
 {
     public function create(array $data)
     {
-        // TODO: Implement create() method.
-        throw new Exception("Method not implemented yet");
+        $query = $this->getQuery();
+        $fields = array_keys($data);
+        $values = array_values($data);
+
+        return $query->create($fields, $values);
     }
 
     public function update(array $data, $condition)
