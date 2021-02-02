@@ -10,10 +10,8 @@ trait RepositoryModifyTrait
     public function create(array $data)
     {
         $query = $this->getQuery();
-        $fields = array_keys($data);
-        $values = array_values($data);
 
-        return $query->create($fields, $values);
+        return $query->create($data);
     }
 
     public function update(array $data, $condition)
