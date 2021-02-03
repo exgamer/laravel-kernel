@@ -10,4 +10,9 @@ interface EloquentRepositoryReadInterface extends DataReadInterface
      * @return Collection
      */
     public function all(): Collection;
+
+    /**
+     * @return integer
+     */
+    public function allCount();
 }

@@ -41,4 +41,13 @@ trait RepositoryReadTrait
     {
         return $this->model->all();
     }
+
+    /**
+     * @return integer
+     */
+    public function allCount()
+    {
+        $model = $this->model;
+        return $model::count();
+    }
 }
