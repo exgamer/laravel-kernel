@@ -24,6 +24,11 @@ trait ServiceReadTrait
         return $this->callRepositoryMethod(__FUNCTION__, func_get_args());
     }
 
+    public function countByCondition($condition)
+    {
+        return $this->callRepositoryMethod(__FUNCTION__, func_get_args());
+    }
+
     public function allCount()
     {
         return $this->callRepositoryMethod(__FUNCTION__, func_get_args());

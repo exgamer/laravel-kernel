@@ -42,6 +42,18 @@ trait RepositoryReadTrait
         return $this->model->all();
     }
 
+    public function countByCondition($condition)
+    {
+        $query = $this->getQuery();
+        if (is_callable($condition)){
+            call_user_func($condition, $query);
+        }else{
+            throw new Exception("Only callbacks supported");
+        }
+
+        return $query->count();
+    }
+
     /**
      * @return integer
      */
