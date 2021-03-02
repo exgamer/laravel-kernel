@@ -6,7 +6,7 @@ use Citizenzet\Laravel\Core\V1\Services\Base\Service;
 use Citizenzet\Php\Core\DataProcessor\DataProcessor;
 use Illuminate\Database\Eloquent\Builder;
 
-abstract class DbDataProcessor extends DataProcessor
+class DbDataProcessor extends DataProcessor
 {
     /**
      * @var Service
