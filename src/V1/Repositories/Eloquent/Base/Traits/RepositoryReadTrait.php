@@ -14,7 +14,14 @@ trait RepositoryReadTrait
 
     public function oneByCondition($condition)
     {
-        // TODO: Implement oneByCondition() method.
+        $query = $this->getQuery();
+        if (is_callable($condition)){
+            call_user_func($condition, $query);
+        }else{
+            throw new Exception("Only callbacks supported");
+        }
+
+        return $query->first();
     }
 
     public function allByIds(array $ids, $condition = null)
