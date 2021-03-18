@@ -10,7 +10,7 @@
     ],
     "require": {
         "php": ">=7.0.0",
-        "citizenzet/php-kernel": "v1.0.1"
+        "citizenzet/php-kernel": "*"
     },
     "autoload": {
         "psr-4": {
